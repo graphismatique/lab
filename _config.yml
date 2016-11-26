@@ -1,6 +1,6 @@
 # Site settings
-title: Will Jekkyll Template
-description: My First Jekyll Template in GitHub
+title: Graphismatique Blog
+description: Made Jekyll Template in GitHub
 baseurl: "/lab/" # the subpath of your site, e.g. /blog
 url: "https://graphismatique.github.io" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
