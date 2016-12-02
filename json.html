@@ -1,0 +1,42 @@
+<html>
+    
+<head>
+
+<script type="text/javascript">
+      
+function ajax_get_json() {
+    var divName = document.getElementById("divName");
+    var hr = new XMLHttpRequest();
+    var url = "my_json_list.php";
+    hr.open("GET", url, true);
+    
+    hr.setRequestHeader("Content-type", "application/json");
+    
+    hr.onreadystatechange = function() {
+	    if(hr.readyState == 4 && hr.status == 200) {
+		    var data = (hr.responseText);
+            
+           divName.innerHTML = data.user+" is "+data.age+" yrs old and lives in "+data.country;
+	    }
+    }
+    
+    hr.send(null);
+    document.getElementById("divName").innerHTML = "Loading JSON Data...";
+}
+
+</script>
+
+</head>
+
+<body>
+    
+    <h1>Ajax Request / json / php</h1>
+    
+    <div id="divName"></div>
+    <script type="text/javascript">ajax_get_json();</script>
+
+
+</body>
+
+
+</html>
